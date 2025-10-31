@@ -8,13 +8,10 @@ public class TurmaResponse
     public int Semestre { get; set; }
     public string Turno { get; set; }
     
-    public Guid Id { get; set; }
-    
     public static TurmaResponse ToResponse(Turma turma)
     {
         return new TurmaResponse
         {
-            Id = turma.Id,
             Identificador = turma.Identificador,
             Semestre = turma.Semestre,
             Turno = turma.Turno
